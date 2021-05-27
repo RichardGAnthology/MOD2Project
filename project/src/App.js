@@ -15,6 +15,7 @@ function App() {
     <div className="App">
       <Router>
         <Nav />
+        <MountClass />
         <Switch>
           <Route path ="/" exact component ={Home} />
           <Route path = "/home" component ={Home} />
@@ -22,7 +23,7 @@ function App() {
           <Route path ='/locations' component={Locations} />
         </Switch>
       </Router>
-      <MountClass />
+      
     </div>
   );
 }

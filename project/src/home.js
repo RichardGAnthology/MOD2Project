@@ -81,7 +81,7 @@ class Home extends Component {
     this.state = {
       searchedStocks: [
         {
-          newStock: "APPLE",
+          newStock: "TSLA",
           stockTitle: "",
           stockLink: "",
           stockImg: "",
@@ -363,7 +363,7 @@ class Home extends Component {
                   key={this.state.searchedStocks.indexOf(mapStock)}
                 >
                   {" "}
-                  Stock being Watched: {mapStock.newStock}{" "}
+                  Stock being watched: {mapStock.newStock}{" "}
                   <button onClick={this.removeStock}> Remove </button>
                 </p>
               );
@@ -382,21 +382,21 @@ class Home extends Component {
         </div>
         <div className="Home">
           <p>Homee</p>
-          <div className="Weather">
-            <button onClick={this.getWeather}> Get Weather </button>
-            {/* <div>
-              <Weather 
+          {/* <div className="Weather"> */}
+            {/* <button onClick={this.getWeather}> Get Weather </button> */}
+            {/* <div> */}
+              {/* <Weather 
               temperature = {this.state.temperature} feelsLike = {this.state.feelsLike}
               condition= {this.state.condition} humidity = {this.state.humidity}
-              icon ={this.state.icon}
-              />
-            </div> */}
+              icon ={this.state.icon} */}
+              {/* /> */}
+            {/* </div> */}
             {/* <p>{`the current temperature is: ${this.state.temperature}`}</p> */}
             {/* <p>{`It currently feels like ${this.state.feelsLike}`}</p> */}
             {/* <p> {`The current condition is of ${this.state.condition}`} </p>
             <p> {`With a current humidity of ${this.state.humidity}%`}</p> */}
             {/* <img src={this.state.icon}></img> */}
-          </div>
+          {/* </div> */}
           </div>
           <div className="GlobalNews">
             <Globalnews 

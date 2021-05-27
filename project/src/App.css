@@ -37,17 +37,89 @@
   }
 } */
 
-
-.ul{
+.ul {
   list-style-type: none;
-}
-
-.navBar{
-  border-style: solid;
-}
-
-/* .navBarContainer{
   display: flex;
+  justify-content: space-evenly;
+}
+
+.navBar {
+  border-style: groove;
   align-items: center;
+  background: rgb(0, 212, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 212, 255, 1) 18%,
+    rgba(181, 223, 148, 1) 36%,
+    rgba(181, 223, 148, 1) 67%,
+    rgba(0, 212, 255, 1) 85%
+  );
+}
+
+.Weather {
+  border-style: groove;
+  display: flex;
   justify-content: space-between;
+  background: rgb(0, 212, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 212, 255, 1) 18%,
+    rgba(181, 223, 148, 1) 36%,
+    rgba(181, 223, 148, 1) 67%,
+    rgba(0, 212, 255, 1) 85%
+  );
+}
+
+body {
+  margin: 0%;
+  /* animation-name: ColorsCanMove; */
+  animation-duration: 50s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+/* @keyframes ColorsCanMove {
+	0% {
+		background: #ee6055;
+	}
+	25% {
+		background: #60d394;
+	}
+	50% {
+		background: #aaf683;
+	}
+	75% {
+		background: #ffd97d;
+	}
+	100% {
+		background: #ff9b85;
+	}
 } */
+
+.stockData {
+  border-style: solid;
+  display: flex;
+  justify-content: left;
+ 
+}
+
+#WeatherFetch {
+  display: flex;
+  justify-content: left;
+  border-style: inset;
+  background: linear-gradient(-45deg, #00D4FF, #B5DE93, #23a6d5, #23d5ab);
+  background-size: 400% 40%;
+  animation: gradienttest 20s ease infinite;
+}
+
+@keyframes gradienttest {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import weather from "./weather";
 import Weather from "./weather";
 
 class mountClass extends Component {
@@ -13,9 +12,9 @@ class mountClass extends Component {
       temperature: "loading...",
       icon: "loading...",
     };
-    this.fetchWeather=this.fetchWeather.bind(this)
-    this.handleCityChange=this.handleCityChange.bind(this)
-    this.handleStateChange=this.handleStateChange.bind(this)
+    this.fetchWeather = this.fetchWeather.bind(this);
+    this.handleCityChange = this.handleCityChange.bind(this);
+    this.handleStateChange = this.handleStateChange.bind(this);
   }
 
   handleStateChange(event) {
@@ -74,32 +73,34 @@ class mountClass extends Component {
   render() {
     return (
       <div>
-           <div>
-            <form onSubmit={this.fetchWeather}>
-              <label>City:</label>
-              <input
-                type="text"
-                //problem has something to do with values being the same for both inputs?
-                value={this.state.city}
-                onChange={this.handleCityChange}
-              />
+        <div id="WeatherFetch">
+          <form onSubmit={this.fetchWeather}>
+            <label>City:</label>
+            <input
+              type="text"
+              //problem has something to do with values being the same for both inputs?
+              value={this.state.city}
+              onChange={this.handleCityChange}
+            />
 
-              <label>State:</label>
-              <input
-                type="text"
-                value={this.state.states}
-                onChange={this.handleStateChange}
-              />
-              <input type="submit" value="submit" />
-            </form>
-          </div>
-         <div>
-              <Weather 
-              temperature = {this.state.temperature} feelsLike = {this.state.feelsLike}
-              condition= {this.state.condition} humidity = {this.state.humidity}
-              icon ={this.state.icon}
-              />
-            </div>
+            <label>State:</label>
+            <input
+              type="text"
+              value={this.state.states}
+              onChange={this.handleStateChange}
+            />
+            <input type="submit" value="submit" />
+          </form>
+        </div>
+        <div>
+          <Weather
+            temperature={this.state.temperature}
+            feelsLike={this.state.feelsLike}
+            condition={this.state.condition}
+            humidity={this.state.humidity}
+            icon={this.state.icon}
+          />
+        </div>
       </div>
     );
   }
