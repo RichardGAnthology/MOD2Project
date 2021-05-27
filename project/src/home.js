@@ -164,7 +164,7 @@ class Home extends Component {
           link: data.articles[0].url,
           newsIcon: data.articles[0].urlToImage,
 
-          titleTw0: data.articles[1].title,
+          titleTwo: data.articles[1].title,
           linkTwo: data.articles[1].url,
           newsIconTwo: data.articles[1].urlToImage,
 
@@ -460,7 +460,7 @@ class Home extends Component {
             />
           </div>
           <div>
-            <button onClick={this.getGlobalNews}>Global News </button>
+            {/* <button onClick={this.getGlobalNews}>Global News </button> */}
             {/* <div>
               <p>{this.state.title}</p>
               <a href={this.state.link}>{this.state.link}</a>

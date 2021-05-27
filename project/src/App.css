@@ -99,7 +99,7 @@ body {
 } */
 
 .stockData {
-  border-style: solid;
+  border-style: inset;
   display: flex;
   justify-content: left;
  
@@ -129,4 +129,8 @@ body {
 .CardContainer{
   display: flex;
   justify-content: center;
+}
+
+body{
+  background-color: #dbf5c5;
 }

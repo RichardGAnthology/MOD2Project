@@ -4,7 +4,13 @@ function locations() {
     return (
         <div>
             <p>
-                City
+                Locations Saved: Manhattan, New York
+            </p>
+            <p>
+                Locations Saved: Austin, Texas
+            </p>
+            <p>
+                Locations Saved: Anchorage, Alaska
             </p>
         </div>
     )

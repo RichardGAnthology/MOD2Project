@@ -4,16 +4,16 @@ function weather(props) {
   return (
     <div className="Weather">
       <div id="Temperature">
-        <p>{`the current temperature is: ${props.temperature}`}</p>
+        <p>{`The current temperature is: ${props.temperature}`}</p>
       </div>
       <div id="FeelsLike">
-        <p>{`It currently feels like ${props.feelsLike}`}</p>
+        <p>{`It currently feels like: ${props.feelsLike}`}</p>
       </div>
       <div id="Condition">
-        <p> {`The current condition is of ${props.condition}`} </p>
+        <p> {`The current condition is: ${props.condition}`} </p>
       </div>
       <div id="Humidity">
-        <p> {`With a current humidity of ${props.humidity}%`}</p>
+        <p> {`The current humidity is: ${props.humidity}%`}</p>
       </div>
       <div id="img">
         <img src={props.icon}></img>

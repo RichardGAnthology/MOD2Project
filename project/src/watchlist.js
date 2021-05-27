@@ -7,8 +7,16 @@ const watchlist = (props) => {
                 Watch List Test
             </p>
             <p>
-                {props.newStock}
-                {props.isAdded}
+            Stock being watched: APPLE  
+            </p>
+            <p>
+            Stock being watched: TESLA
+            </p>
+            <p>
+            Stock being watched: PEPSI
+            </p>
+            <p>
+            Stock being watched: MICROSOFT
             </p>
         </div>
     ) 
