@@ -117,7 +117,7 @@ class Home extends Component {
     };
 
     // this.getWeather = this.getWeather.bind(this);
-    this.getGlobalNews = this.getGlobalNews.bind(this);
+    // this.getGlobalNews = this.getGlobalNews.bind(this);
     // this.getStockNews = this.getStockNews.bind(this);
     // this.getStockData = this.getStockData.bind(this);
     // this.getWeather = this.getWeather.bind(this);
@@ -150,7 +150,7 @@ class Home extends Component {
   //   // .catch(err => alert("Wrong City name!"))
   // }
 
-  getGlobalNews() {
+  componentDidMount() {
     let api =
       "https://newsapi.org/v2/top-headlines?country=us&apiKey=24eeb1aefa064475ad2979bedca27f20";
     fetch(api)
@@ -370,6 +370,53 @@ class Home extends Component {
             }
           })}
         </div>
+        {/* <div>
+            <button onClick={this.getStockNews}>Stock News</button>
+          </div> */}
+          <div>
+              <button onClick={this.addStock}>Add To Watch List</button>
+            </div>
+            <div>
+            <button onClick={this.getStockNews}>Stock News</button>
+          </div>
+          <div className="stockNews">
+            <form onSubmit={this.fetchStockNews}>
+              <label>Stock:</label>
+              <input
+                type="text"
+                value={this.state.newStock}
+                onChange={this.handleStockChange}
+              ></input>
+              <input type="submit" value="submit"></input>
+            </form>
+            <div>
+            {/* <div className="StockNews">
+              <StockNews 
+              stockTitle={this.state.stockTitle} stockTitle1={this.state.stockTitle1} stockTitle2={this.state.stockTitle2} stockTitle3={this.state.stockTitle3} stockTitle4={this.state.stockTitle4}
+              stockLink={this.state.stockLink} stockLink1={this.state.stockLink1} stockLink2={this.state.stockLink2} stockLink3={this.state.stockLink3} stockLink4={this.state.stockLink4}
+              stockImg={this.state.stockImg} stockImg1={this.state.stockImg1} stockImg2={this.state.stockImg2} stockImg3={this.state.stockImg3} stockImg4={this.state.stockImg4}
+              />
+            </div> */}
+            
+              {/* <p>{this.state.searchedStocks.stockName}</p> */}
+              {/* <p>{this.state.stockTitle}</p>
+              <a href={this.state.stockLink}>{this.state.stockLink}</a>
+              <img src={this.state.stockImg} width="200"></img>
+              <p>{this.state.stockTitle1}</p>
+              <a href={this.state.stockLink1}>{this.state.stockLink1}</a>
+              <img src={this.state.stockImg1} width="200"></img>
+              <p>{this.state.stockTitle2}</p>
+              <a href={this.state.stockLink2}>{this.state.stockLink2}</a>
+              <img src={this.state.stockImg2} width="200"></img>
+              <p>{this.state.stockTitle3}</p>
+              <a href={this.state.stockLink3}>{this.state.stockLink3}</a>
+              <img src={this.state.stockImg3} width="200"></img>
+              <p>{this.state.stockTitle4}</p>
+              <a href={this.state.stockLink4}>{this.state.stockLink4}</a>
+              <img src={this.state.stockImg4} width="200"></img> */}
+            </div>
+          </div>
+            
         <div className="stockData"> 
         <StockData high={this.state.high} low={this.state.low} open={this.state.open} volume={this.state.volume} close={this.state.close}/>
         </div>
@@ -380,8 +427,15 @@ class Home extends Component {
           <p>Volume:{this.state.volume}</p>
           <p>Close:{this.state.close}</p> */}
         </div>
+        <div className="StockNews">
+              <StockNews 
+              stockTitle={this.state.stockTitle} stockTitle1={this.state.stockTitle1} stockTitle2={this.state.stockTitle2} stockTitle3={this.state.stockTitle3} stockTitle4={this.state.stockTitle4}
+              stockLink={this.state.stockLink} stockLink1={this.state.stockLink1} stockLink2={this.state.stockLink2} stockLink3={this.state.stockLink3} stockLink4={this.state.stockLink4}
+              stockImg={this.state.stockImg} stockImg1={this.state.stockImg1} stockImg2={this.state.stockImg2} stockImg3={this.state.stockImg3} stockImg4={this.state.stockImg4}
+              />
+            </div>
         <div className="Home">
-          <p>Homee</p>
+          <h1>Global News</h1>
           {/* <div className="Weather"> */}
             {/* <button onClick={this.getWeather}> Get Weather </button> */}
             {/* <div> */}
@@ -433,51 +487,10 @@ class Home extends Component {
               <img src={this.state.newsIconFive} width="200"></img>
             </div> */}
           </div>
-          <div>
-            <button onClick={this.getStockNews}>Stock News</button>
-          </div>
-          <div className="stockNews">
-            <form onSubmit={this.fetchStockNews}>
-              <label>Stock:</label>
-              <input
-                type="text"
-                value={this.state.newStock}
-                onChange={this.handleStockChange}
-              ></input>
-              <input type="submit" value="submit"></input>
-            </form>
-            <div className="StockNews">
-              <StockNews 
-              stockTitle={this.state.stockTitle} stockTitle1={this.state.stockTitle1} stockTitle2={this.state.stockTitle2} stockTitle3={this.state.stockTitle3} stockTitle4={this.state.stockTitle4}
-              stockLink={this.state.stockLink} stockLink1={this.state.stockLink1} stockLink2={this.state.stockLink2} stockLink3={this.state.stockLink3} stockLink4={this.state.stockLink4}
-              stockImg={this.state.stockImg} stockImg1={this.state.stockImg1} stockImg2={this.state.stockImg2} stockImg3={this.state.stockImg3} stockImg4={this.state.stockImg4}
-              />
-            </div>
-            <div>
-              {/* <p>{this.state.searchedStocks.stockName}</p> */}
-              {/* <p>{this.state.stockTitle}</p>
-              <a href={this.state.stockLink}>{this.state.stockLink}</a>
-              <img src={this.state.stockImg} width="200"></img>
-              <p>{this.state.stockTitle1}</p>
-              <a href={this.state.stockLink1}>{this.state.stockLink1}</a>
-              <img src={this.state.stockImg1} width="200"></img>
-              <p>{this.state.stockTitle2}</p>
-              <a href={this.state.stockLink2}>{this.state.stockLink2}</a>
-              <img src={this.state.stockImg2} width="200"></img>
-              <p>{this.state.stockTitle3}</p>
-              <a href={this.state.stockLink3}>{this.state.stockLink3}</a>
-              <img src={this.state.stockImg3} width="200"></img>
-              <p>{this.state.stockTitle4}</p>
-              <a href={this.state.stockLink4}>{this.state.stockLink4}</a>
-              <img src={this.state.stockImg4} width="200"></img> */}
-            </div>
-            <div>
-              <button onClick={this.addStock}>Add To Watch List</button>
-            </div>
-          </div>
-          <div>
+         
+          {/* <div>
             <button onClick={this.getStockData}>Get Stock Data</button>
-          </div>
+          </div> */}
           <div>
             {/* <WatchList newStock={this.state.newStock} isAdded={this.state.isAdded}/> */}
           </div>
