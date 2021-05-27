@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+# Hello all! This is the final project for second MOD of the program. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**My cohort and I were assigned tasks such that:**
 
-## Available Scripts
+1. The code should be written in ES6 as much as possible.
+2. It should use the create-react-app generator to start the project. 
+3. It makes use of React Router (install react-router-dom).
+4. It should incorporate 2 container components.
+5. It should incorporate 5 stateless components.
+6. There should be 3 or more routes.
+7. The client-side application should handle the display of data with minimal data manipulation.
+8. It uses CSS to style the application.
+9. The frontend uses AJAX (fetch) requests.
+10. The application has at least 2 unique APIs (should be related in some way).
+11. The readme file clearly documents the purpose of the project as a problem statement.
+12. The readme file clearly documents the target end user for this project.
 
-In the project directory, you can run:
+# The space below will be dedicated to the aforementioned final two points.  
 
-### `npm start`
+## The purpose of this project.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The purpose of this project is a simple one which makes it all the better. In it's final version, tt is meant to facilitate the lives of any and all whom find themselves using it. It is a program that will inform it's users of the weather, global news, and relevant stock information, whether it be prices or news, depending on what the user inputs. Ideally, as I have envisioned it, it will be primarily used in the early hours and late hours of the day. To set a scene: you wake up, open the program and within seconds have enough information to decide whether you will call out of work or not...I joke. But, you will have enough information to decide whether or not you change your position on an investment you've made, or whether you should start a new position. Personally, I created this app with the real intention of using it when finished and polished. The absence of advertisement alone is a great motivator, but the colors also help. 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## The target end user for this project. 
 
-### `npm test`
+It's easy to say that I've answered this question already, but I don't feel like I have... and I say this because I don't believe this program is for everyone. It is meant to be used by those that find themselves interested in any fluctuations of their investments, those that would like to stay up to date on news involving their investments and more importantly, whether or not they should take an umbrella if they don't call out of work...is this joke getting old? In other words, the end user for this project is the person that has to open three apps to find information that only they will care about but instead finds themselves getting bombarded with advertisement because they googled vacuums before heading to bed the night before. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Enjoy!**
