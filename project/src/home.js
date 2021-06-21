@@ -209,7 +209,7 @@ class Home extends Component {
     currentStock.push(newlyAdded);
 
     this.setState({ searchedStocks: currentStock });
-    this.state.push({ pathname: "/watchlist", state: { newStock: "hello" } });
+    // this.state.push({ pathname: "/watchlist", state: { newStock: "hello" } });
   }
 
   // removeStock() {
