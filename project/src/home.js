@@ -6,12 +6,11 @@
 //:D
 
 import React, { Component } from "react";
-import Weather from "./weather";
-import Globalnews from "./globalnews";
-import StockNews from './stockNews'
-import StockData from "./stockData";
-import WatchList from './watchlist'
 
+import Globalnews from "./globalnews";
+import StockNews from "./stockNews";
+import StockData from "./stockData";
+// import Link from 'react-router-dom'
 
 // let city = this.state.city;
 // let state = this.state.state;
@@ -19,18 +18,6 @@ import WatchList from './watchlist'
 class Home extends Component {
   constructor(props) {
     super(props);
-
-    // this.state = {
-    //   stock: "",
-    //   // currentPrice: [],
-    //   high: [],
-    //   low: [],
-    //   open: [],
-    //   volume: [],
-
-    //   // watchListArr: [],
-    //   // watchList: false,
-    // };
 
     this.state = {
       city: "",
@@ -64,20 +51,6 @@ class Home extends Component {
       newsIconFive: "",
     };
 
-    // this.state = {
-    //   searchedStocks: [
-    //     { stockName: "apple", stockTitle: "", stockLink: "", stockImg: "" },
-
-    //     { stockTitle1: "", stockLink1: "", stockImg1: "" },
-
-    //     { stockTitle2: "", stockLink2: "", stockImg2: "" },
-
-    //     { stockTitle3: "", stockLink3: "", stockImg3: "" },
-
-    //     { stockTitle4: "", stockLink4: "", stockImg4: "" }
-    //   ],
-    // };
-
     this.state = {
       searchedStocks: [
         {
@@ -100,7 +73,7 @@ class Home extends Component {
       newStock: "",
       isAdded: "",
       stock: "",
-      close:[],
+      close: [],
       // currentPrice: [],
       high: [],
       low: [],
@@ -116,39 +89,11 @@ class Home extends Component {
       icon: "loading...",
     };
 
-    // this.getWeather = this.getWeather.bind(this);
-    // this.getGlobalNews = this.getGlobalNews.bind(this);
-    // this.getStockNews = this.getStockNews.bind(this);
-    // this.getStockData = this.getStockData.bind(this);
-    // this.getWeather = this.getWeather.bind(this);
-    // this.fetchWeather = this.fetchWeather.bind(this);
-    // this.handleCityChange = this.handleCityChange.bind(this);
-    // this.handleStateChange = this.handleStateChange.bind(this);
     this.fetchStockNews = this.fetchStockNews.bind(this);
     this.handleStockChange = this.handleStockChange.bind(this);
     this.addStock = this.addStock.bind(this);
-    this.removeStock = this.removeStock.bind(this);
+    // this.removeStock = this.removeStock.bind(this);
   }
-
-  // componentDidMount() {
-  //   let api =
-  //     "http://api.weatherapi.com/v1/current.json?key=0b3e252f561e42a3a5e211104212205&q=newyork New york &aqi=no&days=7";
-  //   fetch(api)
-  //     .then((response) => {
-  //       return response.json();
-  //     })
-  //     .then((data) => {
-  //       console.log(data);
-  //       this.setState({
-  //         feelsLike: data.current.feelslike_f,
-  //         humidity: data.current.humidity,
-  //         condition: data.current.condition.text,
-  //         temperature: data.current.temp_f,
-  //         icon: data.current.condition.icon,
-  //       });
-  //     });
-  //   // .catch(err => alert("Wrong City name!"))
-  // }
 
   componentDidMount() {
     let api =
@@ -183,86 +128,6 @@ class Home extends Component {
       });
   }
 
-  //dont forget you have to set it up so that on stock search the news gets searched too
-
-  // getStockNews() {
-  //   let api =
-  //     "https://newsapi.org/v2/everything?q=AAPL&from=2021-05-22&sortBy=popularity&apiKey=24eeb1aefa064475ad2979bedca27f20";
-  //   fetch(api)
-  //     .then((response) => {
-  //       return response.json();
-  //     })
-  //     .then((data) => {
-  //       console.log(data);
-  //     });
-  // }
-
-  // getStockData(event) {
-  //   // let stock = [".AAPL"]
-  //   //its not a bug its a feature - search the full name or add other parameters
-  //   //for a more specific(synonym) search
-  //   event.preventDefault();
-  //   let symbol = this.state.newStock;
-  //   let api =
-  //     "https://api.twelvedata.com/time_series?" +
-  //     +symbol +
-  //     ",&interval=1min&outputsize=1&apikey=5549c18320c74e52bec8159d8fb1128e";
-
-  //   fetch(api)
-  //     .then((response) => {
-  //       return response.json();
-  //     })
-  //     //need to make the stock name dynamic
-  //     .then((data) => console.log(data.AAPL.values[0].close));
-  // }
-
-  // handleCityChange(event) {
-  //   this.setState({ city: event.target.value });
-  // }
-
-  // handleCityChange = (event) =>{
-  //   this.setState({city: event.target.value})
-  // }
-
-  // handleStateChange(event) {
-  //   this.setState({ states: event.target.value });
-  // }
-
-  // handleStateChange = (event) =>{
-  //   this.setState({states: event.target.value})
-  // }
-
-  // fetchWeather(event) {
-  //   event.preventDefault();
-  //   let city = this.state.city;
-  //   let states = this.state.states;
-
-  //   console.log(states);
-  //   console.log(city);
-
-  //   let api =
-  //     "http://api.weatherapi.com/v1/current.json?key=0b3e252f561e42a3a5e211104212205&q=" +
-  //     city +
-  //     " " +
-  //     states +
-  //     "&aqi=no&days=7";
-  //   fetch(api)
-  //     .then((response) => {
-  //       return response.json();
-  //     })
-  //     .then((data) => {
-  //       this.setState({
-  //         feelsLike: data.current.feelslike_f,
-  //         humidity: data.current.humidity,
-  //         condition: data.current.condition.text,
-  //         temperature: data.current.temp_f,
-  //         icon: data.current.condition.icon,
-  //       });
-  //     });
-  // }
-
-  //Day 2 Question: HOW TO SETSTATE OF ARRAY?!?!?!? 
-  //Day 4 Answer: ha 
   handleStockChange(event) {
     this.setState({ newStock: event.target.value });
   }
@@ -326,7 +191,6 @@ class Home extends Component {
 
         console.log(data);
         console.log(symbol);
-        // console.log(data.symbol.values[0].high)
       });
   }
 
@@ -343,13 +207,14 @@ class Home extends Component {
     };
 
     currentStock.push(newlyAdded);
-    //next time make sure to think
+
     this.setState({ searchedStocks: currentStock });
+    this.state.push({ pathname: "/watchlist", state: { newStock: "hello" } });
   }
 
-  removeStock() {
-    let currentStock = this.state.searchedStocks.slice();
-  }
+  // removeStock() {
+  //   let currentStock = this.state.searchedStocks.slice();
+  // }
 
   render() {
     return (
@@ -369,151 +234,75 @@ class Home extends Component {
               );
             }
           })}
-        </div>
-        {/* <div>
-            <button onClick={this.getStockNews}>Stock News</button>
-          </div> */}
-          <div>
-              <button onClick={this.addStock}>Add To Watch List</button>
-            </div>
-            <div>
-            <button onClick={this.getStockNews}>Stock News</button>
-          </div>
-          <div className="stockNews">
-            <form onSubmit={this.fetchStockNews}>
-              <label>Stock:</label>
-              <input
-                type="text"
-                value={this.state.newStock}
-                onChange={this.handleStockChange}
-              ></input>
-              <input type="submit" value="submit"></input>
-            </form>
-            <div>
-            {/* <div className="StockNews">
-              <StockNews 
-              stockTitle={this.state.stockTitle} stockTitle1={this.state.stockTitle1} stockTitle2={this.state.stockTitle2} stockTitle3={this.state.stockTitle3} stockTitle4={this.state.stockTitle4}
-              stockLink={this.state.stockLink} stockLink1={this.state.stockLink1} stockLink2={this.state.stockLink2} stockLink3={this.state.stockLink3} stockLink4={this.state.stockLink4}
-              stockImg={this.state.stockImg} stockImg1={this.state.stockImg1} stockImg2={this.state.stockImg2} stockImg3={this.state.stockImg3} stockImg4={this.state.stockImg4}
-              />
-            </div> */}
-            
-              {/* <p>{this.state.searchedStocks.stockName}</p> */}
-              {/* <p>{this.state.stockTitle}</p>
-              <a href={this.state.stockLink}>{this.state.stockLink}</a>
-              <img src={this.state.stockImg} width="200"></img>
-              <p>{this.state.stockTitle1}</p>
-              <a href={this.state.stockLink1}>{this.state.stockLink1}</a>
-              <img src={this.state.stockImg1} width="200"></img>
-              <p>{this.state.stockTitle2}</p>
-              <a href={this.state.stockLink2}>{this.state.stockLink2}</a>
-              <img src={this.state.stockImg2} width="200"></img>
-              <p>{this.state.stockTitle3}</p>
-              <a href={this.state.stockLink3}>{this.state.stockLink3}</a>
-              <img src={this.state.stockImg3} width="200"></img>
-              <p>{this.state.stockTitle4}</p>
-              <a href={this.state.stockLink4}>{this.state.stockLink4}</a>
-              <img src={this.state.stockImg4} width="200"></img> */}
-            </div>
-          </div>
-            
-        <div className="stockData"> 
-        <StockData high={this.state.high} low={this.state.low} open={this.state.open} volume={this.state.volume} close={this.state.close}/>
+
+          <button onClick={this.addStock}>Add To Watch List</button>
         </div>
         <div>
-          {/* <p>High:{this.state.high}</p>
-          <p>Low:{this.state.low}</p>
-          <p>Open:{this.state.open}</p>
-          <p>Volume:{this.state.volume}</p>
-          <p>Close:{this.state.close}</p> */}
+          <button onClick={this.getStockNews}>Stock News</button>
         </div>
+        <div className="stockNews">
+          <form onSubmit={this.fetchStockNews}>
+            <label>Stock:</label>
+            <input
+              type="text"
+              value={this.state.newStock}
+              onChange={this.handleStockChange}
+            ></input>
+            <input type="submit" value="submit"></input>
+          </form>
+        </div>
+
+        <div className="stockData">
+          <StockData
+            high={this.state.high}
+            low={this.state.low}
+            open={this.state.open}
+            volume={this.state.volume}
+            close={this.state.close}
+          />
+        </div>
+
         <div className="StockNews">
-              <StockNews 
-              stockTitle={this.state.stockTitle} stockTitle1={this.state.stockTitle1} stockTitle2={this.state.stockTitle2} stockTitle3={this.state.stockTitle3} stockTitle4={this.state.stockTitle4}
-              stockLink={this.state.stockLink} stockLink1={this.state.stockLink1} stockLink2={this.state.stockLink2} stockLink3={this.state.stockLink3} stockLink4={this.state.stockLink4}
-              stockImg={this.state.stockImg} stockImg1={this.state.stockImg1} stockImg2={this.state.stockImg2} stockImg3={this.state.stockImg3} stockImg4={this.state.stockImg4}
-              />
-            </div>
+          <StockNews
+            stockTitle={this.state.stockTitle}
+            stockTitle1={this.state.stockTitle1}
+            stockTitle2={this.state.stockTitle2}
+            stockTitle3={this.state.stockTitle3}
+            stockTitle4={this.state.stockTitle4}
+            stockLink={this.state.stockLink}
+            stockLink1={this.state.stockLink1}
+            stockLink2={this.state.stockLink2}
+            stockLink3={this.state.stockLink3}
+            stockLink4={this.state.stockLink4}
+            stockImg={this.state.stockImg}
+            stockImg1={this.state.stockImg1}
+            stockImg2={this.state.stockImg2}
+            stockImg3={this.state.stockImg3}
+            stockImg4={this.state.stockImg4}
+          />
+        </div>
         <div className="Home">
           <h1>Global News</h1>
-          {/* <div className="Weather"> */}
-            {/* <button onClick={this.getWeather}> Get Weather </button> */}
-            {/* <div> */}
-              {/* <Weather 
-              temperature = {this.state.temperature} feelsLike = {this.state.feelsLike}
-              condition= {this.state.condition} humidity = {this.state.humidity}
-              icon ={this.state.icon} */}
-              {/* /> */}
-            {/* </div> */}
-            {/* <p>{`the current temperature is: ${this.state.temperature}`}</p> */}
-            {/* <p>{`It currently feels like ${this.state.feelsLike}`}</p> */}
-            {/* <p> {`The current condition is of ${this.state.condition}`} </p>
-            <p> {`With a current humidity of ${this.state.humidity}%`}</p> */}
-            {/* <img src={this.state.icon}></img> */}
-          {/* </div> */}
-          </div>
-          <div className="GlobalNews">
-            <Globalnews 
-            title={this.state.title} titleTwo={this.state.titleTwo} titleThree={this.state.titleThree} titleFour={this.state.titleFour} titleFive={this.state.titleFive}
-            link={this.state.link} linkTwo={this.state.linkTwo} linkThree={this.state.linkThree} linkFour={this.state.linkFour} linkFive ={this.state.linkFive}
-            newsIcon={this.state.newsIcon} newsIconTwo={this.state.newsIconTwo} newsIconThree={this.state.newsIconThree} newsIconFour={this.state.newsIconFour} newsIconFive={this.state.newsIconFive}
-            />
-          </div>
-          <div>
-            {/* <button onClick={this.getGlobalNews}>Global News </button> */}
-            {/* <div>
-              <p>{this.state.title}</p>
-              <a href={this.state.link}>{this.state.link}</a>
-              <img src={this.state.newsIcon} width="200"></img>
-            </div>
-            <div>
-              <p>{this.state.titleTwo}</p>
-              <a href={this.state.linkTwo}>{this.state.linkTwo}</a>
-              <img src={this.state.newsIconTwo} width="200"></img>
-            </div>
-            <div>
-              <p>{this.state.titleThree}</p>
-              <a href={this.state.linkThree}>{this.state.linkThree}</a>
-              <img src={this.state.newsIconThree} width="200"></img>
-            </div>
-            <div>
-              <p>{this.state.titleFour}</p>
-              <a href={this.state.linkFour}>{this.state.linkFour}</a>
-              <img src={this.state.newsIconFour} width="200"></img>
-            </div>
-            <div>
-              <p>{this.state.titleFive}</p>
-              <a href={this.state.linkFive}>{this.state.linkFive}</a>
-              <img src={this.state.newsIconFive} width="200"></img>
-            </div> */}
-          </div>
-         
-          {/* <div>
-            <button onClick={this.getStockData}>Get Stock Data</button>
-          </div> */}
-          <div>
-            {/* <WatchList newStock={this.state.newStock} isAdded={this.state.isAdded}/> */}
-          </div>
-          {/* <div>
-            <form onSubmit={this.fetchWeather}>
-              <label>City:</label>
-              <input
-                type="text"
-                //problem has something to do with values being the same for both inputs?
-                value={this.state.city}
-                onChange={this.handleCityChange}
-              />
-
-              <label>State:</label>
-              <input
-                type="text"
-                value={this.state.states}
-                onChange={this.handleStateChange}
-              />
-              <input type="submit" value="submit" />
-            </form>
-          </div> */}
-        
+        </div>
+        <div className="GlobalNews">
+          <Globalnews
+            title={this.state.title}
+            titleTwo={this.state.titleTwo}
+            titleThree={this.state.titleThree}
+            titleFour={this.state.titleFour}
+            titleFive={this.state.titleFive}
+            link={this.state.link}
+            linkTwo={this.state.linkTwo}
+            linkThree={this.state.linkThree}
+            linkFour={this.state.linkFour}
+            linkFive={this.state.linkFive}
+            newsIcon={this.state.newsIcon}
+            newsIconTwo={this.state.newsIconTwo}
+            newsIconThree={this.state.newsIconThree}
+            newsIconFour={this.state.newsIconFour}
+            newsIconFive={this.state.newsIconFive}
+          />
+        </div>
       </div>
     );
   }

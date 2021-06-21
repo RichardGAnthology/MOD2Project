@@ -1,25 +1,16 @@
-import React from 'react'
+import React from "react";
 
-const watchlist = (props) => {
-    return (
-        <div>
-            <p>
-                Watch List Test
-            </p>
-            <p>
-            Stock being watched: APPLE  
-            </p>
-            <p>
-            Stock being watched: TESLA
-            </p>
-            <p>
-            Stock being watched: PEPSI
-            </p>
-            <p>
-            Stock being watched: MICROSOFT
-            </p>
-        </div>
-    ) 
-}
+//I need this to display the current state thats being set in home.js
+//but, watchlist.js isnt a child component to home.js so it cant use props for home.
+const watchlist = () => {
+  return (
+    <div>
+      <p>Stock being watched: APPLE</p>
+      <p>Stock being watched: TESLA</p>
+      <p>Stock being watched: PEPSI</p>
+      <p>Stock being watched: MICROSOFT</p>
+    </div>
+  );
+};
 
-export default watchlist
+export default watchlist;

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Weather from "./weather";
 
-
 class mountClass extends Component {
   constructor(props) {
     super(props);
